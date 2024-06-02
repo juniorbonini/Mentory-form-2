@@ -1,0 +1,210 @@
+:root {
+  --base-text: #4e4958;
+  --fieldset-text: #253b51;
+  --header-background: #293241;
+  --main-background: #bfd7e4;
+  --button-color: #f67669;
+  --form-color: #ffffff;
+  --line-separator: #e6e6f0;
+  --input-background: #fafafc;
+  --label-color: #c1bccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--header-background);
+  height: 440px;
+  z-index: -1;
+}
+
+body {
+  background: var(--main-background);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 84px;
+  align-items: center;
+  color: var(--form-color);
+}
+
+.main-div {
+  width: 736px;
+  align-items: center;
+  margin: auto;
+}
+
+header h1 {
+  font-family: "Saatliches", sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 24px;
+}
+
+.header-div {
+  background: var(--button-color);
+  width: 100%;
+  height: 133px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.header-div h3 {
+  margin-top: 65px;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 14px;
+  font-family: "Saatliches", sans-serif;
+}
+
+form {
+  background: var(--form-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  gap: 48px;
+  padding: 64px;
+  margin-bottom: 40px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+fieldset {
+  border: none;
+  legend {
+    font-family: "Saatliches", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 16px;
+    font-style: normal;
+    color: var(--fieldset-text);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line-separator);
+  }
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+  border: 1px solid var(--line-separator);
+  background: var(--input-background);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-radius: 8px;
+  height: 56px;
+  font-size: 16px;
+  color: var(--label-color);
+  line-height: 24px;
+  padding: 0 24px;
+}
+
+label {
+  font-size: 14px;
+  color: var(--base-text);
+  line-height: 16px;
+  font-size: 16px;
+}
+
+label span {
+  color: var(--label-color);
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.input-wrapper textarea {
+  padding: 0;
+  height: 168px;
+}
+
+.col-2:nth-child(1) {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.64984L5 5.61617L9 1.64984' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.checkbox-wrapper input {
+  opacity: 0;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  border: 1px solid black;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.col-3 {
+    display: flex;
+    gap: 20px;
+}
+
+.col-3:nth-child(1) {
+    width: 100%;
+}
+
+
+button {
+    background: var(--button-color);
+    height: 56px;
+    width: 100%;
+    font-family: "Staatliches", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--input-background);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+button:hover {
+    opacity: .7;
+}
